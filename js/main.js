@@ -46,7 +46,7 @@ Hero.prototype.move = function (direction) {
 };
 
 Hero.prototype.jump = function () {
-    const JUMP_SPEED = 400;
+    const JUMP_SPEED = 500;
     let canJump = this.body.touching.down && this.alive && !this.isFrozen;
 
     if (canJump || this.isBoosting) {
