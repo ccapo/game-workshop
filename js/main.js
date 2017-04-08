@@ -33,7 +33,7 @@ Hero.prototype.move = function (direction) {
     // guard
     if (this.isFrozen) { return; }
 
-    const SPEED = 200;
+    const SPEED = 250;
     this.body.velocity.x = direction * SPEED;
 
     // update image flipping & animations
@@ -46,7 +46,7 @@ Hero.prototype.move = function (direction) {
 };
 
 Hero.prototype.jump = function () {
-    const JUMP_SPEED = 500;
+    const JUMP_SPEED = 450;
     let canJump = this.body.touching.down && this.alive && !this.isFrozen;
 
     if (canJump || this.isBoosting) {
